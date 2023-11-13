@@ -1,0 +1,15 @@
+$i: txt-font;
+
+@for $f from 1 through 50 {
+  #{$i}-#{$f} {
+    font-size: 0em + $f/10 !important;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.txt-center {
+  text-align: center;
+}

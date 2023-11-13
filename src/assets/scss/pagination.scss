@@ -1,0 +1,15 @@
+.gx_pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    & li {
+        & a {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.pagi {
+    position: absolute;
+    bottom: 0;
+}

@@ -1,0 +1,43 @@
+.modal {
+    z-index: 999;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: overlay;
+    transition: all .5s;
+    & .sub-main {
+        color: #000;
+        background: white;
+        border-radius: 25px;
+        overflow: auto;
+        max-height: 94vh;
+        min-height: 94vh;
+        & .iclose {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+        }
+        & input,
+        select {
+            text-align: center;
+        }
+    }
+    & .w-modal {
+        min-height: 25vh;
+        padding: 25px;
+        border-radius: 20px;
+        background: #FFF;
+        margin-top: 20px;
+         & .iclose {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2em;
+         }
+    }
+}

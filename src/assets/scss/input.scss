@@ -1,0 +1,30 @@
+$w: w !default;
+select,
+input {
+    margin: 0 5px;
+    @for $i from 1 through 100 {
+        &.#{$w}-#{$i} {
+            width: 0% + $i;
+        }
+    }
+}
+
+.input-incorrect {
+    border: none;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: $colorDanger;
+}
+
+.input-focus {
+    transition: .5s ease-in-out;
+    &:focus {
+        transform: translateY(5px);
+    }
+}
+
+input.dis-esp:disabled {
+    background: transparent !important;
+    border: none; // border-bottom: 3px solid rgb(221, 68, 68);
+    box-shadow: 10px 10px 5px 0px rgba(41, 12, 12, 0.672);
+}

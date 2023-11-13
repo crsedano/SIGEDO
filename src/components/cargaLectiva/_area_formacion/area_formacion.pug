@@ -1,0 +1,60 @@
+.ed-container.init
+    h2.ed-item.sep-10.gr-center
+        strong ÁREA DE FORMACIÓN
+
+    .ed-item.form-group.sep-5.m-40.to-center
+        label Modalidad
+        select.form-control(v-model="modalidad")
+            option(value="0") SELECCIONAR
+            option(value="1") PRESENCIAL
+            option(value="2") SEMIPRESENCIAL
+    
+    .ed-item.form-group.sep-5.m-40.to-center
+        label Filial
+        select.form-control(v-model="filial")
+            option(value="0") SELECCIONAR
+            option(:value="f_.id_filial" v-for="(f_, index) in filiales" :key="index") {{f_.nombre_filial}} 
+    
+    .ed-item.form-group.sep-5.m-40.to-center
+        label Facultad
+        select.form-control(v-model="facultad")
+            option(value="0") SELECCIONAR
+            option(:value="f_.id_facultad" v-for="(f_, index) in facultades" :key="index") {{f_.nombre}} 
+    
+    .ed-item.form-group.sep-5.m-40.to-center
+        label Área de Formación
+        select.form-control(v-model="areaF")
+            option(value="0") SELECCIONAR
+            option(:value="a_.id_area_formacion" v-for="(a_, index) in areasF" :key="index") {{a_.nombre}}
+    
+    .ed-item.gr-center.sep-5
+        button.btn.btn-info.btn-rounded(@click="getReport" v-if="searhValid")
+            i.fas.fa-sync
+            |  Actualizar
+        button.btn.btn-dark.btn-rounded(@click="exportExcel" v-if="arrReport")
+            i.fas.fa-file-excel
+            |  Excel
+    
+    .ed-item.table-content(style="max-height: 500px")
+        table#table.table.table-bordered.table-responsive.table-hover.table-striped.table-own(v-if="arrReport")
+            thead.table-head
+                tr
+                    th GRADO
+                    th TÌTULO PROFESIONAL
+                    th DNI
+                    th APELLIDOS Y NOMBRES
+                    th CONDICIÒN
+                    th DEDICACIÒN
+                    th TOTAL DE HORAS
+            tbody.table-body
+                tr(v-for="(arr, index) in arrReport" :key="index")
+                    td.w-30 {{arr.mayor_grado}}
+                    td.w-200 {{arr.ctitulo}}
+                    td.w-30 {{arr.id_docente}}
+                    td.w-300 {{arr.docente}}
+                    td.w-30 {{arr.condic}}
+                    td.w-20 {{modalidad == 1 ? arr.dedicacion : arr.dedicacion_sp}}
+                    td.w-10 {{parseInt(arr.tot_pre) + parseInt(arr.tot_sem)}}
+
+    .modal.f-row.f-center(v-if="ajaxLoad")
+        loader

@@ -1,0 +1,36 @@
+'use strict';
+
+export default class GxSilabusEstrategias {
+    constructor(
+        id_silabus_estrategias = '',
+        id_asignatura = '',
+        cnombre = '',
+        cdetalle = '',
+        ctipo = '',
+        id_usuario_insert = '',
+        fecha_insert = '',
+        canio = '',
+        cperiodo = '',
+        id_docente = '',
+        id_periodo = '',
+        id_semestre = '',
+        id_modalidad = '',
+        id_filial = '',
+    ) {
+        this.id_silabus_estrategias = id_silabus_estrategias
+        this.id_asignatura = id_asignatura
+        this.cnombre = cnombre
+        this.cdetalle = cdetalle
+        this.ctipo = ctipo
+        this.id_usuario_insert = id_usuario_insert
+        this.fecha_insert = fecha_insert
+        this.canio = canio
+        this.cperiodo = cperiodo
+        this.id_docente = id_docente
+        this.id_periodo = id_periodo
+        this.id_semestre = id_semestre
+        this.id_modalidad = id_modalidad
+        this.id_filial = id_filial
+    }
+
+}

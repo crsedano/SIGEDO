@@ -1,0 +1,300 @@
+*
+{
+    margin: 0;
+    padding: 0;
+	font-family: Arial;
+	line-height: 140%;
+}
+body
+{
+    background: url('../img/fondo_tablero.jpg');
+}
+#contenedor_principal
+{
+    margin: 0 auto;
+    width: 960px;
+}
+#contenedor_cabecera
+{
+    float: left;
+    width: 960px;
+}
+.logo
+{
+	float: left;
+    width: 63px;
+    height: 90px;
+    margin: 10px 0 0 0;
+}
+.sesion
+{
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 0 5px 0 0;
+}
+.sesion p
+{
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: 300;
+	color: white;
+	margin: 0 0 10px 0;
+}
+.sesion a
+{
+	display: block;
+	width: 100px;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	margin: 0 0 0 30px;
+	padding: 5px 0 0 0;
+	background: url('../img/fondo_cerrar_sesion.png') no-repeat;
+}
+.sesion a:hover
+{
+	text-decoration: underline;
+}
+.menu_principal 
+{
+    float: left;
+    width: 960px;
+    height: 48px;
+    padding: 0;
+    margin: 10px 0 0 0; 
+    border: 0;
+}
+.menu_principal ul, .menu_principal li 
+{
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+.menu_principal ul 
+{
+    position: relative; 
+    z-index: 597; 
+}
+.menu_principal ul li 
+{ 
+    float: left; 
+    min-height: 1px; 
+    vertical-align: middle;
+}
+.menu_principal ul li.hover, .menu_principal ul li:hover 
+{
+    position: relative; 
+    z-index: 599; 
+    cursor: default;
+}
+.menu_principal ul ul 
+{
+    visibility: hidden; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    z-index: 598; 
+    width: 100%;
+}
+.menu_principal ul ul li 
+{
+    float: none;
+}
+.menu_principal ul ul ul 
+{
+    top: 0; 
+    left: auto; 
+    right: -99.5%;
+}
+.menu_principal ul li:hover > ul 
+{ 
+    visibility: visible;
+}
+.menu_principal ul ul 
+{
+    bottom: 0; 
+    left: 0;
+}
+.menu_principal ul ul 
+{
+    margin-top: 0;	
+}
+.menu_principal ul ul li 
+{
+    font-weight: normal;
+}
+.menu_principal a 
+{ 
+    display: block; 
+    line-height: 1em; 
+    text-decoration: none; 
+}
+.menu_principal 
+{
+    background: #333;
+    border-bottom: 4px solid #1b9bff;
+    font-family: Arial, Tahoma, Arial, sans-serif;
+    font-size: 15px;
+}
+.menu_principal > ul 
+{ 
+    display: inline-block; 
+}
+.menu_principal:after, .menu_principal ul:after 
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+.menu_principal a 
+{
+    background: #333;
+    color: #CBCBCB;
+    padding: 0 20px;
+}
+.menu_principal ul
+{ 
+    text-transform: uppercase; 
+}
+
+.menu_principal ul ul 
+{
+    border-top: 4px solid #1b9bff;
+    text-transform: none;
+    min-width: 190px;
+}
+.menu_principal ul ul a 
+{
+    background: #1b9bff;
+    color: #FFF;
+    border: 1px solid #0082e7;
+    border-top: 0 none;
+    line-height: 150%;
+    padding: 16px 20px;
+}
+.menu_principal ul ul ul 
+{ 
+    border-top: 0 none; 
+}
+.menu_principal ul ul li 
+{ 
+    position: relative 
+}
+.contenedor_formulario
+{
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    margin-top: 205px;
+    margin-left: -250px;
+}
+.menu_principal > ul > li > a 
+{ 
+    line-height: 48px; 
+}
+.menu_principal ul ul li:first-child > a 
+{ 
+    border-top: 1px solid #0082e7; 
+}
+.menu_principal ul ul li:hover > a 
+{ 
+    background: #35a6ff; 
+}
+
+.menu_principal ul ul li:last-child > a 
+{
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 0 #1b9bff;
+}
+.menu_principal ul ul li:last-child:hover > a 
+{ 
+    border-radius: 0 0 0 3px; 
+}
+
+.menu_principal ul ul li.has-sub > a:after 
+{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -8px;
+}
+.menu_principal ul li:hover > a, .menu_principal ul li.active > a 
+{
+    background: #1b9bff;
+    color: #FFF;
+}
+.menu_principal ul li.has-sub > a:after 
+{
+    content: '+';
+    margin-left: 5px;
+}
+.menu_principal ul li.last ul 
+{
+    left: auto;
+    right: 0;
+}
+.menu_principal ul li.last ul ul 
+{
+    left: auto;
+    right: 99.5%;
+}
+form
+{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+h1
+{
+    float: left;
+    margin: 10px 0 10px 105px;
+    padding: 15px 0 10px 0;
+    text-align: center;
+    font-family: Arial;
+    font-size: 30px;
+    color: white;  
+    width: 300px;
+    height: 40px; 
+    background: url('../img/fondo_sigedo.png') repeat;
+    border: 1px solid white;
+}
+form .input_text 
+{
+    width: 480px;
+    height: 32px;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    background: url('../img/caja_texto.png') top center no-repeat;
+    border: none;
+}
+form .input_text:focus, .input_text:hover 
+{
+    background: url('../img/caja_texto_hover.png') top center;
+    border: none;
+}
+form .input_submit
+{
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0 0 110px;
+    font-size: 20px;
+}
+form .input_submit:focus, .input_submit:hover 
+{
+    border: 2px solid blue;
+}
+#contendor_cuerpo
+{
+	color: white;
+}
+#contendor_cuerpo table
+{
+	#contendor_cuerpo;
+}
+#contenedor_pie_pagina

@@ -1,0 +1,86 @@
+$colorInfo: #17A2B8;
+$colorSuccess: #28A745;
+$colorDanger: #DC3545;
+$colorDark: #343A40;
+$sep: sep !default;
+$devMode: false;
+@import "node_modules/ed-grid/ed-grid";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+option,
+label {
+    color: #000;
+}
+
+.gr-center {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.ed-item {
+    @for $i from 1 through 100 {
+        &.#{$sep}-#{$i} {
+            margin: 0px+$i auto;
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.init {
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+a{
+  text-decoration: none;
+}
+
+.full {
+  max-width: 100% !important;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.el-form--label-top .el-form-item__label {
+  padding: 0 !important;
+}
+
+.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
+  margin-bottom: 7px;
+}
+
+.el-select {
+  display: block;
+}
+
+.el-message-box {
+  width: 320px;
+  @media screen and(min-width: 420px) {
+      width: 400px;
+  }
+}
+
+@import 'button.scss';
+@import 'flex.scss';
+@import 'icon.scss';
+@import 'input.scss';
+@import 'modal.scss';
+@import 'pagination.scss';
+@import 'table.scss';
+@import 'text.scss';

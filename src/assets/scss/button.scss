@@ -1,0 +1,68 @@
+.btn-rounded {
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.btn {
+    margin: 5px;
+    &-centered {
+        display: block;
+        margin: auto;
+    }
+    &-success {
+        background: #28A745;
+        border-color: #28A745;
+        &:hover {
+            background: rgb(32, 128, 54);
+            border-color: rgb(32, 128, 54);
+        }
+    }
+    &-warning {
+        background: #FFC107;
+        border-color: #FFC107;
+        color: black;
+        &:hover {
+            background: rgb(202, 156, 18);
+            border-color: rgb(202, 156, 18);
+            color: black;
+        }
+    }
+    &-danger {
+        background: #DC3545;
+        border-color: #DC3545;
+        &:hover {
+            background: rgb(184, 41, 56);
+            border-color: rgb(184, 41, 56);
+        }
+    }
+    &-info {
+        background: #17A2B8;
+        border-color: #17A2B8;
+        &:hover {
+            background: rgb(27, 117, 131);
+            border-color: rgb(27, 117, 131);
+        }
+    }
+    &-dark {
+        background: #343A40;
+        border-color: #343A40;
+        color: #FFF;
+        &:hover {
+            background: rgb(39, 42, 46);
+            border-color: rgb(39, 42, 46);
+        }
+    }
+    &-hov {
+        transition: 1s;
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+        &:disabled {
+            &:hover {
+                transform: translateY(0);
+                box-shadow: none;
+            }
+        }
+    }
+}

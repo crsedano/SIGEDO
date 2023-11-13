@@ -1,0 +1,7 @@
+/*Print.css by Alberto Quispe Cuzcano 2017 by UPLA */
+
+
+  .texto-vertical {writing-mode: vertical-lr;transform: rotate(180deg);}
+
+.table01>tbody>tr>td,.table01>tbody>tr>th,.table01>tfoot>tr>td,.table01>tfoot>tr>th,.table01>thead>tr>td,.table01>thead>tr>th{padding:0px; font-size:8px;}
+.table01>thead>tr>td,.table01>thead>tr>th{ background-color: #004066;  color: #fff;}
